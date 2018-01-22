@@ -3,11 +3,11 @@
 var myApp = angular
     .module("myModule", [])
     .controller("myController", function ($scope) {
-        var employee = {
-            firstName: "David",
-            lastName: "Hastings",
-            gender: "Male"
+        var country = {
+            name: "USA",
+            capital: "Washington, D.C.",
+            flag: "/Images/usa-flag.png"
         };
 
-        $scope.employee = employee;
+        $scope.country = country;
     });

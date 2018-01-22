@@ -8,13 +8,15 @@
 </head>
 <body ng-controller="myController">
     <div>
-        First Name: {{ employee.firstName }}
+        Name: {{ country.name }}
     </div>
     <div>
-        Last Name: {{ employee.lastName }}
+        Capital: {{ country.capital }}
     </div>
     <div>
-        Gender: {{ employee.gender }}
+        <img ng-src="{{ country.flag }}"
+             alt="{{ country.name + ' Flag'}}"
+             style="height:100px; width:200px"/>
     </div>
 </body>
 </html>
