@@ -8,16 +8,27 @@
 </head>
 <body ng-app="myModule">
     <div ng-controller="myController">
-        <ul>
-            <li ng-repeat="country in countries">
-                {{ country.name }} - Index = {{ $index }}
-                <ul>
-                    <li ng-repeat="city in country.cities">
-                        {{ city.name }}  - Parent Index = {{ $parent.$index }}, Index = {{ $index }}
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <table style="font-family:Arial" border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Like/Dislike</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies">
+                    <td>{{ technology.name }}</td>
+                    <td>{{ technology.likes }}</td>
+                    <td>{{ technology.dislikes }}</td>
+                    <td>
+                        <input type="button" value="Like" ng-click="incrementLikes(technology)" />
+                        <input type="button" value="Dislike" ng-click="incrementDislikes(technology)" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
