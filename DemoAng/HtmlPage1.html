@@ -8,6 +8,8 @@
 </head>
 <body ng-app="myModule">
     <div ng-controller="myController">
+        Rows to Limit: <input type="number" step="1" min="0" max="5" ng-model="rowLimit" />
+        <br /><br />
         <table style="font-family:Arial" border="1">
             <thead>
                 <tr>
@@ -19,8 +21,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="employee in employees">
-                    <td>{{ employee.name }}</td>
+                <tr ng-repeat="employee in employees | limitTo:rowLimit">
+                    <td>{{ employee.name | uppercase }}</td>
                     <td>{{ employee.dateOfBirth | date:"dd/MM/yyyy"}}</td>
                     <td>{{ employee.gender | lowercase }}</td>
                     <td>{{ employee.salary | number:2 }}</td>
