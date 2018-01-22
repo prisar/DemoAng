@@ -1,13 +1,13 @@
-﻿/// <reference path="angular.min.js" />
+﻿/// <reference path="angular.js" />
 
-var myApp = angular.module("myModule", []);
+var myApp = angular
+    .module("myModule", [])
+    .controller("myController", function ($scope) {
+        var employee = {
+            firstName: "David",
+            lastName: "Hastings",
+            gender: "Male"
+        };
 
-myApp.controller("myController", function ($scope) {
-    var employee = {
-        firstName: "David",
-        lastName: "Hastings",
-        gender: "Male"
-    }
-
-    $scope.employee = employee;
-});
+        $scope.employee = employee;
+    });
