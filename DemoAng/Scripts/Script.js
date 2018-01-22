@@ -9,7 +9,7 @@ var myApp = angular
                 cities: [
                     { name: "London" },
                     { name: "Manchester" },
-                    { name: "Birmingham" },
+                    { name: "Birmingham" }
                 ]
             },
             {
@@ -17,7 +17,7 @@ var myApp = angular
                 cities: [
                     { name: "Los Angeles" },
                     { name: "Chicago" },
-                    { name: "Houston" },
+                    { name: "Houston" }
                 ]
             },
             {
@@ -25,9 +25,9 @@ var myApp = angular
                 cities: [
                     { name: "Hyderabad" },
                     { name: "Chennai" },
-                    { name: "Mumbai" },
+                    { name: "Mumbai" }
                 ]
-            },
+            }
         ];
 
         $scope.countries = countries;
